@@ -72,6 +72,7 @@ public class MainActivity extends BaseActivity implements CountryDetailMVP, Swip
     public void onFailure(String appErrorMessage) {
         errorLayout.setVisibility(View.VISIBLE);
         errorText.setText(AppUtils.formNetworkErrorText(this,appErrorMessage));
+        Toast.makeText(MainActivity.this, AppUtils.formNetworkErrorText(this,appErrorMessage), Toast.LENGTH_SHORT).show();
     }
 
 
